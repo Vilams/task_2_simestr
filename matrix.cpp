@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib> //библиотека для рандома
 #include <ctime>   //тоже для рандома
-#include <cmath>
+#include <cmath>	
 using namespace std;
 
 
@@ -67,7 +67,7 @@ int main(){
 			}else choose= 1;			
 			matrix[i][j]=choose;
 			matrix2[i][j]=choose;
-			glav[a][a]=choose;
+			glav[i][j]=choose;
 		}
 	}
 	print(matrix,a);
@@ -85,7 +85,7 @@ int main(){
 	        copy(matrix,glav,a);
 	    }else{  // # мат. дейсвия 
 	        W=exp(-delta/T);
-	        double rnd= rand()%10000000;
+	        float rnd= rand()%100;
 	       	P= 1 / (rnd + 1);
 	        if (W>=P){   //# Е остаеться без изменения, main сохраняет значение E	
     			copy(matrix,glav,a);        
